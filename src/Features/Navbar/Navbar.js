@@ -1,27 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Navbar.scss";
-import SearchBar from '../../Components/SearchBar/SearchBar';
-import Burger from '../../Components/BurgerMenu/Burger';
+import Burger from "../../Components/BurgerMenu/Burger";
 
+var searchIcon = "assets/Search.svg";
+var NotificationIcon = "assets/notification.svg";
+var profilePhoto = "assets/profile-photo.png";
 
 const Navbar = () => {
+    const [toggle, setToggle] = useState(false);
+    var number = 8;
+
+    const toggleMenu = (clicked) => {
+        setToggle(!clicked);
+    }
+
     return (
-        <nav className="navbar">
+        <nav className="navbar-container">
             <div className="container">
-                <div className="nav-content">
-                    <div className="brand-search">
+                <div className="navbar-content">
+                    <div className="column-one">
                         <div className="brand">
                             TransMonitor
                         </div>
                         <div className="searchbar">
-                            <SearchBar text="search..."/>
+                             <div className="search-icon">
+                                 <img src={searchIcon} alt=""/>
+                             </div>
+                             <div className="search-text">
+                                <input type="text" name="search" className="search"
+                                    placeholder="search..."
+                                />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="menu-items">
-                        <div className="desktop">hello desktop</div>
-                        <div className="mobile">
-                            <Burger />
+                    <div className="column-two">
+                        <div className="desktop-menu">
+                            <ul className="nav-items">
+                                <li className="nav-links">Support</li>
+                                <li className="nav-links">FAQ</li>
+                                <li className="nav-links">
+                                    <div className="notification">
+                                        <img src={NotificationIcon} alt=""/>
+                                        <div className="notification-number">
+                                            {number}
+                                        </div>
+                                    </div>
+                                </li>
+                                <li className="profile">
+                                    <div className="welcome">
+                                        <div className="hello">hello</div>
+                                        <div className="name">Oluwaleke Ojo</div>
+                                    </div>
+                                    <div className="profile-photo">
+                                        <img src={profilePhoto} alt="" className="profile-photo"/>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="mobile-menu">
+                            <Burger toggleMenu={toggleMenu}/>
                         </div>
                     </div>
                 </div>

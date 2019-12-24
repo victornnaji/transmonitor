@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import "./Burger.scss";
 
-const Burger = () => {
+const Burger = ({toggleMenu}) => {
     const [clicked, setClicked] = useState(false);
 
     const clickToggle = () => {
         setClicked(!clicked);
+        toggleMenu(clicked);
     }
 
     return (

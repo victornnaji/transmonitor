@@ -1,50 +1,113 @@
 @import "../../variables.scss";
 
-.navbar{
+.navbar-container{
     height: 6rem;
-    background-color: $background;
     box-shadow: $box-shadow;
+    background: $background;   
+    display: flex;
+    align-items: center; 
 }
 
-.nav-content{
+.navbar-content{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
 }
 
 .brand{
-font-style: normal;
-font-weight: 900;
-font-size: 2.4rem;
-line-height: 2.8rem;
-text-align: right;
-color: $font-blue;
-
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: $font-blue;
+    width: 20rem;
+    font-family:'Roboto', sans-serif;
 }
 
-.brand-search{
+.column-one{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchbar{
+    margin-left: 2rem;
     display: flex;
     justify-content: space-between;
-    width: 33rem;
     align-items: center;
 
-    @media (max-width: 1024px){
-        width: 26rem;
+    .search{
+        border: none;
+        margin-left: 1.6rem;
+        font-size: 1.2rem;
+        
+        &:focus{
+            outline: none;
+        }
     }
 }
 
-.menu-items{
-    @media (min-width: 1024px){
-        .mobile{
+.column-two{
+    .desktop-menu{
+        @media (max-width: 1024px){
             display: none;
         }
     }
 
-
-    @media (max-width: 1024px){
-        .desktop{
+    .mobile-menu{
+        @media (min-width: 1024px){
             display: none;
         }
     }
+}
+
+.nav-items{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 40.7rem;
+    padding: none;
+    font-size: 1.4rem;
+    color: #647787;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.notification{
+    position: relative;
+}
+.notification-number{
+    border-radius: 90%;
+    position: absolute;
+    right: -.3rem;
+    top: -.7rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: #1860EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #FCFDFF;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.welcome{
+    margin-right: 9px;
+    & .hello{
+        font-size: 1rem;
+        text-align: end;
+    }
+
+    & .name{
+        font-size: 1.4rem;
+    }
+}
+
+.profile-photo{
+    border-radius: 90%;
 }
