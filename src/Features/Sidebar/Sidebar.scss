@@ -40,4 +40,48 @@
     margin-top: 3.2rem;
     font-size: 11px;
     line-height: 15px;
+    color: #647787;
+}
+
+.overview{
+    margin-top: 2.4rem;
+}
+
+.payments{
+    margin-top: 3.5rem;
+}
+
+.payment-menu{
+    margin-top: 1.5rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order-menu{
+    margin-top: 1.4rem;
+    height: 8rem;
+}
+
+.payment-column{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 8rem;
+    margin-top: -9rem;
+
+    & .payments {
+        margin-top: 2rem;
+    }
+}
+
+.payment-menu-mobi{
+    display: flex;
+    justify-content: space-between;
+}
+
+.marchant-profile{
+    margin-top: 3rem;
 }
