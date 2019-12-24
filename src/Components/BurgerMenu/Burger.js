@@ -6,7 +6,7 @@ const Burger = ({toggleMenu}) => {
 
     const clickToggle = () => {
         setClicked(!clicked);
-        toggleMenu(clicked);
+        toggleMenu && toggleMenu(clicked);
     }
 
     return (

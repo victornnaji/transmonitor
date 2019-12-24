@@ -1,0 +1,23 @@
+.sidebar-mobile-container{
+    height: 0;
+    // transform: translateY(-10px);
+    visibility: collapse;
+    transition: all .2s;
+    opacity: 0;
+}
+.visibility{
+   height: 100%;
+   visibility: visible;
+   transform: translateY(0);
+   opacity: 1;
+   transition: all .2s;
+}
+
+.burger{
+    margin: 0 auto;
+    text-align: center;
+}
+
+@keyframes slide-in{
+    
+}

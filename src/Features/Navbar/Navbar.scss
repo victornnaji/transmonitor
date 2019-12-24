@@ -158,9 +158,11 @@
     right: 0;
     transition: all .2s;
     box-shadow: $box-shadow;
+    display: none;
 }
 
 .toggle{
+    display: block;
     height: 90vh;
     width: 68vw;
 }

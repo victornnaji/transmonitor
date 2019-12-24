@@ -1,0 +1,43 @@
+@import "../../variables.scss";
+.sidebar-container{
+    width: 23.5rem;
+    padding: 0 4rem;
+    height: calc(100vh - 6rem);
+    position: sticky;
+    padding-top: 3rem;
+    box-shadow: $box-shadow;
+}
+
+.sidebar-container{
+    @media (max-width: 1024px){
+        display: none;
+    }
+}
+
+.mobile-sidebar{
+    @media (min-width: 1024px){
+        display: none;
+    }
+}
+
+.mobile-sidebar-contents{
+    box-shadow: $box-shadow;
+    height: 20rem;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    & .button-mobile{
+        display: inline-block;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.main{
+    margin-top: 3.2rem;
+    font-size: 11px;
+    line-height: 15px;
+}
