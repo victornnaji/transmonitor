@@ -59,7 +59,31 @@ const Navbar = () => {
                             </ul>
                         </div>
                         <div className="mobile-menu">
-                            <Burger toggleMenu={toggleMenu}/>
+                                <div className="notification">
+                                        <img src={NotificationIcon} alt=""/>
+                                        <div className="notification-number">
+                                            {number}
+                                        </div>
+                                </div>
+                            <div className="burger-menu">
+                                <Burger toggleMenu={toggleMenu}/>
+                            </div>
+
+                            <div className={`menu-overlay ${toggle && "toggle"}`}>
+                                <div className="mobile-menu-contents">
+                                    <div className="mobile-menu-links">
+                                        <div className="profile-photo">
+                                            <img src={profilePhoto} alt="" className="profile-photo"/>
+                                        </div>
+                                   </div>
+                                   <div className="mobile-menu-links">
+                                       Support
+                                   </div>
+                                   <div className="mobile-menu-links">
+                                       FAQ
+                                   </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
