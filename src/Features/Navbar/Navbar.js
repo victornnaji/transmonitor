@@ -1,6 +1,8 @@
 import React from 'react';
 import "./Navbar.scss";
 import SearchBar from '../../Components/SearchBar/SearchBar';
+import Burger from '../../Components/BurgerMenu/Burger';
+
 
 const Navbar = () => {
     return (
@@ -17,7 +19,10 @@ const Navbar = () => {
                     </div>
 
                     <div className="menu-items">
-                        hello
+                        <div className="desktop">hello desktop</div>
+                        <div className="mobile">
+                            <Burger />
+                        </div>
                     </div>
                 </div>
             </div>

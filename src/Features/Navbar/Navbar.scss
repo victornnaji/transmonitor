@@ -28,4 +28,23 @@ color: $font-blue;
     justify-content: space-between;
     width: 33rem;
     align-items: center;
+
+    @media (max-width: 1024px){
+        width: 26rem;
+    }
+}
+
+.menu-items{
+    @media (min-width: 1024px){
+        .mobile{
+            display: none;
+        }
+    }
+
+
+    @media (max-width: 1024px){
+        .desktop{
+            display: none;
+        }
+    }
 }
