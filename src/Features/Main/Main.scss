@@ -105,3 +105,82 @@
         }
     }
 }
+
+.main-graph-section{
+    margin-top: 4.304rem;
+
+    & .heading{
+        font-size: 36px;
+        line-height: 48px;
+        display: flex;
+        color: #262626;
+
+    }
+}
+
+.payment-table-options{
+    margin-top: 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    line-height: 17px;
+
+    @media (max-width: 1024px){
+        flex-wrap: wrap;
+    }
+    
+    @media (min-width: 1024px){
+        transform: translateX(-30px);
+    }
+    // background-color: red;
+
+    & .show-data-type{
+        display: flex;
+        justify-content: space-between;
+
+        width: 50%;
+       @media (min-width: 1024px){
+        width: 20%;
+       }
+        
+        span{
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.payment-display-number{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-data-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchbar-table{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #787878;
+}
+.search{
+    margin: -7px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.5px solid #787878;;
+    padding: .6rem 1.5rem;
+    width: 36.5rem;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+.table-main-content{
+    // margin-top: 1rem;
+}

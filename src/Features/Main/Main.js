@@ -2,9 +2,11 @@ import React from 'react';
 import "./Main.scss";
 import Box from '../../Components/Box/Box';
 import Chart from '../../Components/Chart/Chart';
+import SimpleSelect from '../../Components/Select/Select';
+import Table from '../../Components/Table/Table';
+// import Select from '../../Components/Select/Select';
 
 const Main = () => {
-
     return (
         <div className="main-container">
             <div className="main-top-section">
@@ -20,7 +22,7 @@ const Main = () => {
 
             <div className="main-chart-section">
                 <div className="chart-box">
-                    <Chart/>
+                    {/* <Chart/> */}
                 </div>
                 <div className="order-payment-box">
                     <div className="order-box">
@@ -42,6 +44,31 @@ const Main = () => {
                             <div className="total">Total Payments: <span>100</span></div>
                         </div>
                 </div>
+            </div>
+
+            <div className="main-graph-section">
+               <div className="heading">Payments</div>
+               <div className="payment-table-options">
+                   <div className="payment-display-number">
+                       <span>Showing</span>
+                       <SimpleSelect datas={[20, 25, 30]} size="small"/>
+                       <span>Out of 500 payments</span>
+                   </div>
+                   <div className="searchbar-table">
+                       <span><img src="assets/Search.svg" alt=""/></span>
+                       <input type="text" className="search" name="search" 
+                       placeholder="Search payments"/>
+                   </div>
+
+                   <div className="show-data-type">
+                       <span>Show</span>
+                       <SimpleSelect  size= "big" datas={["All", "Reconciled", "Un-Reconciled", "Settled", "Unsettled"]}/>
+                   </div>
+               </div>
+            </div>
+
+            <div className="table-main-content">
+                <Table />
             </div>
         </div>
     )
