@@ -1,7 +1,10 @@
 .main-container{
     background-color: #E5E5E5;
     width: 100%;
-    max-height: calc(1450px - 0rem);
+    
+    @media(min-width: 1024px){
+        max-height: calc(1450px - 0rem);
+    }
 
     @media (min-width: 1024px){
         padding: 4.3rem 3rem;
@@ -36,12 +39,12 @@
 .main-chart-section{
     margin-top: 2.7rem;
     height: 32.9rem;
-    // background-color: red;
     display: flex;
     justify-content: space-between;
 
     & .chart-box{
         width: 70.7%;
+        background-color: #fff;
     }
 
     & .order-payment-box{
@@ -107,7 +110,7 @@
 }
 
 .main-graph-section{
-    margin-top: 4.304rem;
+    margin-top: 2.304rem;
 
     & .heading{
         font-size: 36px;

@@ -12,7 +12,7 @@ const Main = () => {
     const [datas, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [dataPerPage, setDataPerPage] = useState(5);
+    const [dataPerPage, setDataPerPage] = useState(9);
     const [numPage, setNumPage] = useState(dataPerPage);
     const [dataType, setDataType] = useState("All");
     const [newData, setnewData] = useState([]);
@@ -73,7 +73,7 @@ const Main = () => {
 
             <div className="main-chart-section">
                 <div className="chart-box">
-                    {/* <Chart/> */}
+                    <Chart/>
                 </div>
                 <div className="order-payment-box">
                     <div className="order-box">
@@ -102,7 +102,7 @@ const Main = () => {
                <div className="payment-table-options">
                    <div className="payment-display-number">
                        <span>Showing</span>
-                       <SimpleSelect datas={[5, 10, 15, 20]}  selected={selectedPageNumber} size="small"/>
+                       <SimpleSelect datas={[9, 15, 20, 25]}  selected={selectedPageNumber} size="small"/>
                        <span>Out of {newData.length} payments</span>
                    </div>
                    <div className="searchbar-table">
