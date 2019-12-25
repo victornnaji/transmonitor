@@ -2,13 +2,17 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    // padding: 1.8rem 2.1rem 1.8rem 1.8rem;
+    padding: 1.8rem 2.1rem 1.8rem 1.8rem;
     background-color: #fff;
-    width: 25.3rem;
+    width: 28rem;
     background: #FFFFFF;
     border: 1px solid #EEF8FD;
     box-sizing: border-box;
     border-radius: 2px;
+
+    @media (max-width: 1024px){
+        width: 100%;
+    }
 }
 
 .contents{

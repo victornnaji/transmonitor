@@ -1,8 +1,10 @@
 import React from 'react';
 import "./Main.scss";
 import Box from '../../Components/Box/Box';
+import Chart from '../../Components/Chart/Chart';
 
 const Main = () => {
+
     return (
         <div className="main-container">
             <div className="main-top-section">
@@ -17,7 +19,29 @@ const Main = () => {
             </div>
 
             <div className="main-chart-section">
-                hello
+                <div className="chart-box">
+                    <Chart/>
+                </div>
+                <div className="order-payment-box">
+                    <div className="order-box">
+                        <div className="title">Orders</div>
+                        <div class="progress">
+                            <div className="progress-bar bg-success" role="progressbar" style={{width: `80%`}} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div className="pending">pending: <span>20</span></div>
+                        <div className="reconciled">Reconciled Order: <span>80</span></div>
+                        <div className="total">Total Orders: <span>100</span></div>
+                    </div>
+                    <div className="order-box">
+                        <div className="title">Payments</div>
+                            <div class="progress">
+                                <div className="progress-bar bg-success" role="progressbar" style={{width: `80%`}} aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div className="pending">Un-Reconciled Payments: <span>20</span></div>
+                            <div className="reconciled">Reconciled Payements: <span>80</span></div>
+                            <div className="total">Total Payments: <span>100</span></div>
+                        </div>
+                </div>
             </div>
         </div>
     )
