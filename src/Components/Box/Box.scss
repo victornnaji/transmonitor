@@ -1,0 +1,31 @@
+.box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // padding: 1.8rem 2.1rem 1.8rem 1.8rem;
+    background-color: #fff;
+    width: 25.3rem;
+    background: #FFFFFF;
+    border: 1px solid #EEF8FD;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+.contents{
+    & .title{
+        font-size: 12px;
+        line-height: 16px;
+        color: #787C90;
+    }
+
+    & .numbers{
+        font-size: 18px;
+        line-height: 24px;
+        color: #262626;
+    }
+}
+
+.chart{
+    height: 10rem;
+    width: 8rem;
+}

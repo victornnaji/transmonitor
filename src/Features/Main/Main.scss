@@ -1,6 +1,21 @@
 .main-container{
-    padding: 3.3rem 3rem;
     background-color: #E5E5E5;
     width: 100%;
     height: calc(1450px - 6rem);
+
+    @media (min-width: 1024px){
+        padding: 4.3rem 3rem;
+    }
+}
+
+.main-top-section{
+    height: 7.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    & .side{
+        display: flex;
+        justify-content: space-between;
+        width: calc(253px + 253px + 50px);
+    }
 }
