@@ -56,7 +56,7 @@ const Sidebar = () => {
                         <Button fill="green" color="white" transform="uppercase"> Generate invoice </Button>
                       </div> 
                       <div className="payment-column">
-                        <p className="main payments">
+                        <p className="mobile-payments">
                             Payments    
                         </p>
                         <div className="payment-menu-mobi">
@@ -65,6 +65,22 @@ const Sidebar = () => {
                             <List img={wallet_failed} text="Un-Reconciled Payments"/>
                             <List img={manual} text="Manual Settlement"/>
                         </div>
+                      </div>
+
+                      <div className="payment-column">
+                        <p className="mobile-payments">
+                            Orders    
+                        </p>
+
+                        <div className="payment-menu-mobi">
+                        <List img={all_orders} text="All Orders"/>
+                        <List img={orders_pending} text="Pending Orders"/>
+                        <List img={reconciled_orders} text="Reconciled Orders"/>
+                        </div>
+                      </div>
+
+                      <div className="merchant-column">
+                        <List img={person} text="Merchant Profile"/>
                       </div>
                       
                     </div>
