@@ -1,11 +1,14 @@
-.content{
+.row {
+    display: -ms-flexbox;
     display: flex;
-
-    @media (max-width: 1024px){
-        flex-direction: column;
-    }
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+     margin-right: 0;  
+    margin-left: 0;
 }
 
-// .sidebar-holder{
-//     background-color: red;
-// }
+.col-lg-2{
+    @media(min-width: 1024px){
+        padding: 0;
+    }
+}
