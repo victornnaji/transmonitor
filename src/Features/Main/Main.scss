@@ -1,7 +1,7 @@
 .main-container{
     background-color: #E5E5E5;
     width: 100%;
-    height: calc(1450px - 6rem);
+    max-height: calc(1450px - 0rem);
 
     @media (min-width: 1024px){
         padding: 4.3rem 3rem;
@@ -182,5 +182,23 @@
 }
 
 .table-main-content{
-    // margin-top: 1rem;
+    height: auto;
+    margin-top: 3rem;
+}
+
+.table-footer-section{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-bottom: 4rem;
+}
+
+.showing{
+    font-size: 13px;
+}
+.pagination{
+   & .page-link{
+       color: #000000 !important;
+    }
 }

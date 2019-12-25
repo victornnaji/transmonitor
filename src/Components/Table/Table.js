@@ -1,18 +1,10 @@
 import React from 'react';
 import "./Table.scss";
 
-const Table = () => {
+const Table = ({datas, loading}) => {
     return (
         <div className="table-container">
-            {/* <div className="table-header">
-                <div className="table-header-item">Item Type</div>
-                <div className="table-header-item">Price</div>
-                <div className="table-header-item">Transaction No</div>
-                <div className="table-header-item">Time</div>
-                <div className="table-header-item">Status   </div>
-            </div>
-            <div className="table-body">haha</div> */}
-
+            {loading ? (<div>loading</div>): 
             <table>
             <thead>
                 <tr>
@@ -24,22 +16,18 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <td data-column="First Name">James madison ibitshgshjdihsjshdj</td>
-                <td data-column="Last Name">Matman</td>
-                <td data-column="Job Title">Chief Sandwich</td>
-                <td data-column="Twitter">@james</td>
-                <td data-column="Twitter">a very big paragraph</td>
-                </tr>
-                <tr>
-                <td data-column="First Name">Andor</td>
-                <td data-column="Last Name">Nagy</td>
-                <td data-column="Job Title">Designer</td>
-                <td data-column="Twitter">@andornagy</td>
-                <td data-column="Twitter">@andornagy</td>
-                </tr>
+                {datas.map(data => (
+                     <tr>
+                     <td data-column="Title">{data.title}</td>
+                     <td data-column="Price">{data.price}</td>
+                     <td data-column="Transaction No">{data.trans_no}</td>
+                     <td data-column="time">{data.time}</td>
+                     <td data-column="Status">{data.status}</td>
+                     </tr>
+                ))}
             </tbody>
          </table>
+            }
         </div>
     )
 }

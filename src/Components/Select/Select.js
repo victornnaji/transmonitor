@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./Select.scss";
 import Select from 'react-select';
 
-const SimpleSelect = ({datas, size}) => {
+const SimpleSelect = ({datas, size, selected}) => {
 const [options, setOptions] = useState([]);
 const [selectedOption, setSelectedOption] = useState(null);
 
@@ -16,7 +16,7 @@ const [selectedOption, setSelectedOption] = useState(null);
 
     const handleChange = selectedOption => {
         setSelectedOption(selectedOption);
-        console.log(`Option selected:`, selectedOption);
+        selected(selectedOption);
     }
     return (
         <Select
