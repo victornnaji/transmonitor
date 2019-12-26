@@ -14,6 +14,10 @@
     align-items: center;
     width: 30%;
     justify-content: space-between;
+
+    @media(max-width: 1024px){
+        width: unset;
+    }
 }
 
 .chart-container-holder{
@@ -33,6 +37,12 @@
 .chartt{
     width: 1069px;
     height: 186px;
+
+    @media (max-width: 1024px){
+        width: 100%;
+        height: 119px;
+        overflow: hidden;
+    }
 }
 
 .months-holder{
